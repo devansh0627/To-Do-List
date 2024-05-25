@@ -5,4 +5,35 @@ To-Do List application, allows users to manage their tasks. The application supp
 - Edit existing tasks.
 - Delete tasks.
 - Toggle between light and dark modes.
-- 
+## Installation
+
+## Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/devansh0627/To-Do-List.git
+
+2. **Navigate to the project directory:**
+ 
+   ```bash
+   cd To-Do-List
+
+3. **Install dependencies:**
+
+    ```bash
+    npm install
+    npm install axios
+    npm install express
+    npm install @heroicons/react@v1
+    npm install dayjs
+    npm install nodemon
+    npm install concurrently --save-dev
+
+4. **Usage:**
+
+a. Start the development server:
+  ```bash
+    npm start
+
+b. Open your web browser and navigate to http://localhost:5173 to view the application or the mentioned address in the console by vite.
