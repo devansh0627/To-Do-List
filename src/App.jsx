@@ -11,6 +11,7 @@ function App() {
   const [dateError, setDateError] = useState('');
   const [titleError, setTitleError] = useState('');
   const backendUrl=import.meta.env.VITE_URL||'http://localhost:3000/';
+  console.log(backendUrl);
   useEffect(() => {
     axios.get(backendUrl+'tasks')
       .then(response => {
