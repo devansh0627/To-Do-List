@@ -10,8 +10,9 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [dateError, setDateError] = useState('');
   const [titleError, setTitleError] = useState('');
+  const backendUrl=import.meta.env.VITE_URL||'http://localhost:3000/';
   useEffect(() => {
-    axios.get('http://localhost:3000/tasks')
+    axios.get(backendUrl+'tasks')
       .then(response => {
         const updatedTasks = response.data.map(t => ({
           ...t,
@@ -47,7 +48,7 @@ function App() {
       return;
      }
     if (editing) {
-      axios.put(`http://localhost:3000/tasks/${task.id}`, updatedTask)
+      axios.put(backendUrl+`tasks/${task.id}`, updatedTask)
         .then(response => {
           setTasks(tasks.map(t => t.id === task.id ? response.data : t));
           setEditing(false);
@@ -55,7 +56,7 @@ function App() {
         })
         .catch(error => console.error('Error updating task:', error));
     } else {
-      axios.post('http://localhost:3000/tasks', updatedTask)
+      axios.post(backendUrl+'tasks', updatedTask)
         .then(response => setTasks([...tasks, response.data]))
         .catch(error => console.error('Error creating task:', error));
     }
@@ -67,7 +68,7 @@ function App() {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3000/tasks/${id}`)
+    axios.delete(backendUrl+`tasks/${id}`)
       .then(() => setTasks(tasks.filter(t => t.id !== id)))
       .catch(error => console.error('Error deleting task:', error));
   };
