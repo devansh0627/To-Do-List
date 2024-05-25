@@ -26,6 +26,7 @@ To-Do List application, allows users to manage their tasks. The application supp
     npm install axios
     npm install express
     npm install @heroicons/react@v1
+    npm install react-toastify
     npm install dayjs
     npm install nodemon
     npm install concurrently --save-dev
