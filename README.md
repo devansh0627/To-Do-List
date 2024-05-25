@@ -32,8 +32,10 @@ To-Do List application, allows users to manage their tasks. The application supp
 
 4. **Usage:**
 
-a. Start the development server:
-  ```bash
-    npm start
+1. **Start the development server:**
 
-b. Open your web browser and navigate to http://localhost:5173 to view the application or the mentioned address in the console by vite.
+   ```bash
+   npm start
+   
+2. Open your web browser and navigate to http://localhost:5173 to view the application or the mentioned address in the console by vite.
+
