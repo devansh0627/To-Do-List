@@ -32,7 +32,7 @@ To-Do List application, allows users to manage their tasks. The application supp
 
 4. **Usage:**
 
-1. **Start the development server:**
+1. Start the development server:
 
    ```bash
    npm start
